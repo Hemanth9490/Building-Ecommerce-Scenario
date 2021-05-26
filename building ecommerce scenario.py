@@ -56,10 +56,11 @@ class Order:
     def display_cart(self):
         for product,quanity in self.items_in_cart:
             product.display_product_details()
-            print("---------------")
+            print("--------------------------------------")
+        
         print("Delivery Method: {}".format(self.delivery_method))
         print("Delivery Address: {}".format(self.delivery_address))
-            
+        
     
     def total_price(self):
         total_price=0
@@ -67,14 +68,30 @@ class Order:
             total_price+=product.get_deal_price()*quanity
         
         total_price=total_price+Order.delivery_charges[self.delivery_method]
+        print("----------------------")
         print("Total Bill: {}".format(total_price))
-    
-Tv=Electronicproduct("TV",1000,500,12,3)
+        print("-----------------------")
+
+#Adding Electronic Items
+Tv=Electronicproduct("LG",10000,9000,"5 Stars","5 Years")
+Keyboard=Electronicproduct("Key Board QWERTY",1000,800,"4 Stars", "1 Year")
+Mouse=Electronicproduct("Wirless Mouse",500,400,"5 Stars","1 Year")
+
+#Adding Grocery Items
+Milk=Groceryproduct("Milk",30,25,"4 Stars","27-05-2021")
+Wheat=Groceryproduct("Wheat Powder",45,40,"4 Stars","27-07-2021")
+GroundNuts=Groceryproduct("Gorund nuts",40,38,"5 Stars","27-08-2021")
+
+#Adding items in the car
 order=Order("Normal","Rajampet")
-order.add_item(Tv,2)
+order.add_item(Tv,1)
+order.add_item(Keyboard,1)
+order.add_item(Mouse,1)
+order.add_item(Milk,2)
+order.add_item(Wheat,3)
+order.add_item(GroundNuts,12)
 order.display_cart()
 order.total_price()
-        
         
         
         
