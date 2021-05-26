@@ -1,0 +1,22 @@
+This is python based program  to implement basic functions of Ecommerce scenario
+
+Consisting of Class like:
+1.Product 
+    In product class we have methods
+        1.Display product
+        2.get deal price
+2.Electronicproducts
+    In Electronicproducts class we have methods
+        1.set warranty
+        2.Display product
+3.Groceryproducts
+    In Groceryproducts class we have methods
+        1.set expire date
+        2display product
+4.Order 
+    In Order class we have methods  
+        1.gGet delivery methods
+        2.Add product in cart
+        3.Del product in cart
+        4.Display products in cart
+        5.Total Bill
